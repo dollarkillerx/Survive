@@ -15,4 +15,5 @@ type Node struct {
 	CPUUsedPercent string     `json:"cpu_used_percent"` // cpu使用率
 	MemUsedPercent string     `json:"mem_used_percent"` // Mem使用率
 	SendEmail      bool       `json:"send_email"`       // 是否发送了邮件
+	IP             string     `json:"ip"`               // ip
 }

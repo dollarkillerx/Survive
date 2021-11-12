@@ -68,6 +68,7 @@ func (s *Server) heartbeat(ctx *gin.Context) {
 	node.MemUsedPercent = req.MemUsedPercent
 	node.LastPingTime = time.Now().Format("2006-01-02 15:04:05")
 	node.Delay = tiM - req.Time
+	node.IP = ctx.ClientIP()
 	timeout := time.Now().Add(time.Second * 6)
 	node.Timeout = &timeout
 

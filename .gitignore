@@ -15,3 +15,6 @@
 # vendor/
 
 .idea
+
+configs/config.json
+test/email_test.go
