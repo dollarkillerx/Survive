@@ -14,6 +14,10 @@ import (
 var serverUri = flag.String("uri", "127.0.0.1:8571", "server rui")
 var token = flag.String("token", "ea_token", "server token")
 
+func init() {
+	flag.Parse()
+}
+
 func main() {
 	uri := fmt.Sprintf("http://%s/heartbeat", *serverUri)
 	fmt.Println("server: ", uri)

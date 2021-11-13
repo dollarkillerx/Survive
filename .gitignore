@@ -18,3 +18,7 @@
 
 configs/config.json
 test/email_test.go
+
+survive_linux
+survive.exe
+survive_server_linux

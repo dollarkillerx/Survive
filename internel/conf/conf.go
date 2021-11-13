@@ -9,8 +9,17 @@ import (
 var CONFIG *Configuration
 
 type Configuration struct {
-	Nodes      []Node `json:"nodes"`
-	ListenAddr string `json:"listen_addr"`
+	Nodes []Node `json:"nodes"`
+
+	EmailConfig EmailConfig `json:"email_config"`
+	ListenAddr  string      `json:"listen_addr"`
+}
+
+type EmailConfig struct {
+	Email    string `json:"email"`
+	SMTPHost string `json:"smtp_host"`
+	SMTPort  int    `json:"smt_port"`
+	Password string `json:"password"`
 }
 
 type Node struct {
